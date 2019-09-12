@@ -2,9 +2,9 @@
 <html>
 <head><meta name="generator" content="Hexo 3.9.0">
   <meta charset="utf-8">
-  <title>javaClass&amp;Object | 子春</title>
+  <title>Java类与对象 | 子春</title>
   <meta name="keywords" content=" java ">
-  <meta name="description" content="javaClass&amp;Object | 子春">
+  <meta name="description" content="Java类与对象 | 子春">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta property="og:type" content="website">
 <meta property="og:title" content="categories">
@@ -104,11 +104,11 @@
 
 
 <ul>
-    <li><div class="all active">全部文章<small>(2)</small></div></li>
+    <li><div class="all active">全部文章<small>(4)</small></div></li>
     
         
             
-            <li><div data-rel="开发">开发<small>(1)</small></div>
+            <li><div data-rel="开发">开发<small>(3)</small></div>
                 
             </li>
             
@@ -124,7 +124,7 @@
     </div>
     <div></div>
 </div>
-<input type="hidden" id="yelog_site_posts_number" value="2">
+<input type="hidden" id="yelog_site_posts_number" value="4">
 
 <div style="display: none">
     <span id="busuanzi_value_site_uv"></span>
@@ -168,20 +168,36 @@
     
     <nav id="title-list-nav">
         
-        <a  class="开发 "
-           href="/2019/09/12/2019-9-12/"
-           data-tag="java"
-           data-author="" >
-            <span class="post-title" title="javaClass&amp;Object">javaClass&amp;Object</span>
-            <span class="post-date" title="2019-09-12 15:07:43">2019/09/12</span>
-        </a>
-        
         <a  class=""
            href="/2019/09/11/hello-world/"
            data-tag=""
            data-author="" >
             <span class="post-title" title="Hello World">Hello World</span>
             <span class="post-date" title="2019-09-11 16:47:13">2019/09/11</span>
+        </a>
+        
+        <a  class="开发 "
+           href="/2019/09/12/javaClass-Object-encapsulation/"
+           data-tag="java"
+           data-author="" >
+            <span class="post-title" title="Java封装">Java封装</span>
+            <span class="post-date" title="2019-09-12 16:28:08">2019/09/12</span>
+        </a>
+        
+        <a  class="开发 "
+           href="/2019/09/12/javaClass-Object/"
+           data-tag="java"
+           data-author="" >
+            <span class="post-title" title="Java类与对象">Java类与对象</span>
+            <span class="post-date" title="2019-09-12 15:07:43">2019/09/12</span>
+        </a>
+        
+        <a  class="开发 "
+           href="/2019/09/12/2019-9-12/"
+           data-tag="java"
+           data-author="" >
+            <span class="post-title" title="Java类与对象">Java类与对象</span>
+            <span class="post-date" title="2019-09-12 15:07:43">2019/09/12</span>
         </a>
         
     </nav>
@@ -198,7 +214,7 @@
     <div class="pjax">
         <article id="post-2019-9-12" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <h1 class="article-title">javaClass&amp;Object</h1>
+        <h1 class="article-title">Java类与对象</h1>
     
     <div class="article-meta">
         
@@ -220,7 +236,7 @@
     </div>
     <div class="article-meta">
         
-        创建时间:<time class="date" title='更新时间: 2019-09-12 16:04:29'>2019-09-12 15:07</time>
+        创建时间:<time class="date" title='更新时间: 2019-09-12 16:56:09'>2019-09-12 15:07</time>
         
     </div>
     <div class="article-meta">
@@ -257,8 +273,7 @@
 </div>
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="类与对象"><a href="#类与对象" class="headerlink" title="类与对象"></a>类与对象</h1><p>java语言的特征：面向对象<br>类：java最小执行单元class 是对象的一个模板<br>对象：基于类创建的一个实体，每个对象仅仅参照一个类  </p>
-<a id="more"></a>
+        <h1 id="类与对象"><a href="#类与对象" class="headerlink" title="类与对象"></a>类与对象</h1><p>java语言的特征：面向对象<br>类：java最小执行单元class 是对象的一个模板<br>对象：基于类创建的一个实体，每个对象仅仅参照一个类</p>
 <h4 id="创建类"><a href="#创建类" class="headerlink" title="创建类"></a>创建类</h4><p>1.属性 存在在类里面<br>2.行为 方法 也是写在类里</p>
 <h4 id="代码示例-学生类"><a href="#代码示例-学生类" class="headerlink" title="代码示例 学生类"></a>代码示例 学生类</h4><p>package com.javasm.odj;</p>
 <p>public class Student {<br>    /*<br>    * 构造方法<br>    * 作用：在创建对象的同时，给对象赋值<br>    * 特点：<br>    *     构造方法名与类名相同<br>    *     构造方法没有返回值，也没有返回值类型<br>    *     系统默认有一个无参构造(缺省构造器)<br>    * 快捷键：Alt+Inside<br>    * */<br>    String name;//属性<br>    String number;<br>    char gender;<br>    public Student() { //无参构造方法<br>    }<br>    public Student(String name, String number, char gender) {//有参构造方法<br>        this.name = name;<br>        this.number = number;<br>        this.gender = gender;<br>    }<br>    public void  eat() {<br>        System.out.println(name + “在吃饭”);<br>    }//类的方法 主要描述一些行为<br>    public void study() {<br>        System.out.println(name + “在学习”);<br>    }<br>    public void show() {<br>        System.out.println(“name:” + name + “,number:” + number + “,gender:” + gender);<br>    }<br>}</p>
@@ -267,7 +282,7 @@
 <h4 id="运行结果"><a href="#运行结果" class="headerlink" title="运行结果"></a>运行结果</h4><p>李四在吃饭<br>张三在吃饭<br>name:张三,number:12345678910,gender:男</p>
 
       
-       <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区留言讨论，也可以邮件至 wuliaosteam@163.com </span>
+       <hr><span style="font-style: italic;color: gray;"> 个人学习，欢迎指正，qq1272829569 </span>
     </div>
 </article>
 
@@ -278,12 +293,12 @@
 
 
 <div class="article_copyright">
-    <p><span class="copy-title">文章标题:</span>javaClass&amp;Object</p>
+    <p><span class="copy-title">文章标题:</span>Java类与对象</p>
     
     <p><span class="copy-title">本文作者:</span><a href="javascript:void(0)" title="子春">子春</a></p>
     <p><span class="copy-title">发布时间:</span>2019-09-12, 15:07:43</p>
-    <p><span class="copy-title">最后更新:</span>2019-09-12, 16:04:29</p>
-    <span class="copy-title">原始链接:</span><a class="post-url" href="/2019/09/12/2019-9-12/" title="javaClass&amp;Object">https://zichun-xg.github.io/2019/09/12/2019-9-12/</a>
+    <p><span class="copy-title">最后更新:</span>2019-09-12, 16:56:09</p>
+    <span class="copy-title">原始链接:</span><a class="post-url" href="/2019/09/12/2019-9-12/" title="Java类与对象">https://zichun-xg.github.io/2019/09/12/2019-9-12/</a>
     <p>
         <span class="copy-title">版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
     </p>
@@ -300,7 +315,7 @@
 
     </div>
     <div class="copyright">
-        <p class="footer-entry">©2019-2019 zichun-xg</p>
+        <p class="footer-entry">zichun-xg</p>
 <p class="footer-entry">Built with <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/yelog/hexo-theme-3-hexo" target="_blank">3-hexo</a> theme</p>
 
     </div>
