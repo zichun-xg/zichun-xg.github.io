@@ -2,9 +2,9 @@
 <html>
 <head><meta name="generator" content="Hexo 3.9.0">
   <meta charset="utf-8">
-  <title>Hello World | 子春</title>
-  <meta name="keywords" content>
-  <meta name="description" content="Hello World | 子春">
+  <title>Java继承 | 子春</title>
+  <meta name="keywords" content=" java ">
+  <meta name="description" content="Java继承 | 子春">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta property="og:type" content="website">
 <meta property="og:title" content="categories">
@@ -228,19 +228,31 @@
 </aside>
 <div class="post">
     <div class="pjax">
-        <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-javaClass-extends" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <h1 class="article-title">Hello World</h1>
+        <h1 class="article-title">Java继承</h1>
     
     <div class="article-meta">
         
         
         
+        <span class="book">
+            
+                <a href="javascript:" data-rel="开发">开发</a>
+            
+        </span>
+        
+        
+        <span class="tag">
+            
+            <a href="javascript:" class="color5">java</a>
+            
+        </span>
         
     </div>
     <div class="article-meta">
         
-        创建时间:<time class="date" title='更新时间: 2019-09-11 16:59:47'>2019-09-11 16:47</time>
+        创建时间:<time class="date" title='更新时间: 2019-09-13 15:31:07'>2019-09-13 11:39</time>
         
     </div>
     <div class="article-meta">
@@ -262,7 +274,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Hello-Hexo"><span class="toc-text">Hello Hexo</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Quick-Start"><span class="toc-text">Quick Start</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Create-a-new-post"><span class="toc-text">Create a new post</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Run-server"><span class="toc-text">Run server</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Generate-static-files"><span class="toc-text">Generate static files</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Deploy-to-remote-sites"><span class="toc-text">Deploy to remote sites</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#继承extends"><span class="toc-text">继承extends</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#方法重写-override"><span class="toc-text">方法重写 override</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#代码示例-创建父类"><span class="toc-text">代码示例 创建父类</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#创建子类"><span class="toc-text">创建子类</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#测试"><span class="toc-text">测试</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#运行结果"><span class="toc-text">运行结果</span></a></li></ol></li></ol></li></ol></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -277,19 +289,15 @@
 </div>
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Hello-Hexo"><a href="#Hello-Hexo" class="headerlink" title="Hello Hexo"></a>Hello Hexo</h2><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+        <h1 id="继承extends"><a href="#继承extends" class="headerlink" title="继承extends"></a>继承extends</h1><p>作用：提高代码的重用性<br>发生在类与类之间，类与类属于继承关系。一个类（子类 派生类）只能继承另外一个类（父类 基类）<br>子类继承父类内容<br>语法：<br>    public class 子类 extends 父类{<br>        //子类可以继承父类的成员（private修饰的成员以及父类的构造无法继承）<br>    }<br>Object 超类 所有的类都会继承超级父类</p>
+<h4 id="方法重写-override"><a href="#方法重写-override" class="headerlink" title="方法重写 override"></a>方法重写 override</h4><p>前提：有继承关系<br>    发生在子类里面，子类重写父类的功能<br>    方法名 形参 返回值必须与父类保持一致。访问权限修饰符可以&gt;=父类修饰符<br>    protected：受保护的 可以修饰成员。包内友好 子类友好<br>    public–&gt;protected–&gt;默认–&gt;pritate</p>
+<h4 id="代码示例-创建父类"><a href="#代码示例-创建父类" class="headerlink" title="代码示例 创建父类"></a>代码示例 创建父类</h4><p>package com.javasm.objExtends;</p>
+<p>public class Employee {<br>    private int id;<br>    private String name;<br>    private char gender;<br>    private double salary;<br>    public void show() {<br>        System.out.println(“员工的信息编号：” + id + “，姓名” + name + “，性别” + gender + “，薪水” + salary);<br>    }<br>    public int getId() {<br>        return id;<br>    }<br>    public void setId(int id) {<br>        this.id = id;<br>    }<br>    public String getName() {<br>        return name;<br>    }<br>    public void setName(String name) {<br>        this.name = name;<br>    }<br>    public char getGender() {<br>        return gender;<br>    }<br>    public void setGender(char gender) {<br>        this.gender = gender;<br>    }<br>    public double getSalary() {<br>        return salary;<br>    }<br>    public void setSalary(double salary) {<br>        this.salary = salary;<br>    }<br>}</p>
+<h4 id="创建子类"><a href="#创建子类" class="headerlink" title="创建子类"></a>创建子类</h4><p>package com.javasm.objExtends;</p>
+<p>public class PM extends Employee{<br>    private int exp;<br>    private double bonus;<br>    public int getExp() {<br>        return exp;<br>    }<br>    public void setExp(int exp) {<br>        this.exp = exp;<br>    }<br>    public double getBonus() {<br>        return bonus;<br>    }<br>    public void setBonus(double bonus) {<br>        this.bonus = bonus;<br>    }<br>    public PM(int exp, double bonus) {<br>        this.exp = exp;<br>        this.bonus = bonus;<br>    }<br>    public PM() {<br>    }<br>    @Override//方法重写<br>    public void show() {<br>        System.out.println(“员工的信息编号：” + getId() + “，姓名：” + getName() + “，性别：” + getGender() + “，薪水：” + getSalary() + “,exp：” + exp + “,bonus：” + bonus);<br>    }<br>}</p>
+<h4 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h4><p>package com.javasm.objExtends;</p>
+<p>public class EmployeeTest {<br>    public static void main(String[] args) {<br>        //展示pm的信息<br>        PM pm = new PM(4,5000);<br>        pm.setName(“经理”);<br>        pm.setId(1001);<br>        pm.setSalary(10000);<br>        pm.setGender(‘男’);<br>        pm.show();<br>    }<br>}</p>
+<h4 id="运行结果"><a href="#运行结果" class="headerlink" title="运行结果"></a>运行结果</h4><p>员工的信息编号：1001，姓名:经理，性别:男，薪水:10000.0,exp:4,bonus:5000.0</p>
 
       
        <hr><span style="font-style: italic;color: gray;"> 个人学习，欢迎指正，qq1272829569 </span>
@@ -303,12 +311,12 @@
 
 
 <div class="article_copyright">
-    <p><span class="copy-title">文章标题:</span>Hello World</p>
+    <p><span class="copy-title">文章标题:</span>Java继承</p>
     
     <p><span class="copy-title">本文作者:</span><a href="javascript:void(0)" title="子春">子春</a></p>
-    <p><span class="copy-title">发布时间:</span>2019-09-11, 16:47:13</p>
-    <p><span class="copy-title">最后更新:</span>2019-09-11, 16:59:47</p>
-    <span class="copy-title">原始链接:</span><a class="post-url" href="/2019/09/11/hello-world/" title="Hello World">https://zichun-xg.github.io/2019/09/11/hello-world/</a>
+    <p><span class="copy-title">发布时间:</span>2019-09-13, 11:39:52</p>
+    <p><span class="copy-title">最后更新:</span>2019-09-13, 15:31:07</p>
+    <span class="copy-title">原始链接:</span><a class="post-url" href="/2019/09/13/javaClass-extends/" title="Java继承">https://zichun-xg.github.io/2019/09/13/javaClass-extends/</a>
     <p>
         <span class="copy-title">版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
     </p>
