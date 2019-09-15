@@ -2,9 +2,9 @@
 <html>
 <head><meta name="generator" content="Hexo 3.9.0">
   <meta charset="utf-8">
-  <title>java子类实例化 | 子春</title>
+  <title>java排序 | 子春</title>
   <meta name="keywords" content=" java ">
-  <meta name="description" content="java子类实例化 | 子春">
+  <meta name="description" content="java排序 | 子春">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta property="og:type" content="website">
 <meta property="og:title" content="categories">
@@ -244,9 +244,9 @@
 </aside>
 <div class="post">
     <div class="pjax">
-        <article id="post-javaClass-super" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-sort" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <h1 class="article-title">java子类实例化</h1>
+        <h1 class="article-title">java排序</h1>
     
     <div class="article-meta">
         
@@ -268,7 +268,7 @@
     </div>
     <div class="article-meta">
         
-        创建时间:<time class="date" title='更新时间: 2019-09-13 20:33:52'>2019-09-13 17:25</time>
+        创建时间:<time class="date" title='更新时间: 2019-09-15 20:38:25'>2019-09-15 20:06</time>
         
     </div>
     <div class="article-meta">
@@ -290,7 +290,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#子类实例化流程"><span class="toc-text">子类实例化流程</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-2-super-父类引用-关键字"><span class="toc-text">1.2 super 父类引用(关键字)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#代码示例-父类"><span class="toc-text">代码示例 父类</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#代码示例-子类"><span class="toc-text">代码示例 子类</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#代码示例-测试"><span class="toc-text">代码示例 测试</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#运行结果"><span class="toc-text">运行结果</span></a></li></ol></li></ol></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#排序"><span class="toc-text">排序</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#冒泡排序"><span class="toc-text">冒泡排序</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#代码示例"><span class="toc-text">代码示例</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#选择排序"><span class="toc-text">选择排序</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#代码示例-1"><span class="toc-text">代码示例</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#插入排序"><span class="toc-text">插入排序</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#代码示例-2"><span class="toc-text">代码示例</span></a></li></ol></li></ol></li></ol></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -305,14 +305,19 @@
 </div>
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="子类实例化流程"><a href="#子类实例化流程" class="headerlink" title="子类实例化流程"></a>子类实例化流程</h1><h4 id="1-2-super-父类引用-关键字"><a href="#1-2-super-父类引用-关键字" class="headerlink" title="1.2 super 父类引用(关键字)"></a>1.2 super 父类引用(关键字)</h4><p>作用：<br>    1.可以访问父类成员(成员变量和成员方法) super.成员<br>    2.可以访问父类的构造方法 super(); super(实参);  必修在子类的构造里访问 而且必修在代码的第一行<br>    子类对象的实例化过程<br>    优先默认执行父类的无参构造 super();(父类构造有异常 子类对象无法创建成功)<br>    假如父类的无参构造不存在(在子类的构造里面必须手动调用父类的有参构造)</p>
-<h4 id="代码示例-父类"><a href="#代码示例-父类" class="headerlink" title="代码示例 父类"></a>代码示例 父类</h4><p>package com.javasm.objExtends;</p>
-<p>public class Employee {<br>    private int id;<br>    private String name;<br>    private char gender;<br>    private double salary;<br>    public void show() {<br>        System.out.println(“员工的信息编号：” + id + “，姓名” + name + “，性别” + gender + “，薪水” + salary);<br>    }<br>    public int getId() {<br>        return id;<br>    }<br>    public void setId(int id) {<br>        this.id = id;<br>    }<br>    public String getName() {<br>        return name;<br>    }<br>    public void setName(String name) {<br>        this.name = name;<br>    }<br>    public char getGender() {<br>        return gender;<br>    }<br>    public void setGender(char gender) {<br>        this.gender = gender;<br>    }<br>    public double getSalary() {<br>        return salary;<br>    }<br>    public void setSalary(double salary) {<br>        this.salary = salary;<br>    }<br>    public Employee() {<br>        System.out.println(“父类的无参构造”);<br>    }<br>    public Employee(int id, String name, char gender, double salary) {<br>        this.id = id;<br>        this.name = name;<br>        this.gender = gender;<br>        this.salary = salary;<br>        System.out.println(“父类的有参构造”);<br>    }<br>}</p>
-<h4 id="代码示例-子类"><a href="#代码示例-子类" class="headerlink" title="代码示例 子类"></a>代码示例 子类</h4><p>package com.javasm.objExtends;</p>
-<p>public class PM extends Employee{<br>    private int exp;<br>    private double bonus;<br>    public int getExp() {<br>        return exp;<br>    }<br>    public void setExp(int exp) {<br>        this.exp = exp;<br>    }<br>    public double getBonus() {<br>        return bonus;<br>    }<br>    public void setBonus(double bonus) {<br>        this.bonus = bonus;<br>    }<br>    public PM(int exp, double bonus) {<br>        super();//运行父类的无参构造 默认执行 必须放在这里的第一行<br>    //  super(0,”li”,’男’,5000);<br>        this.exp = exp;<br>        this.bonus = bonus;<br>        System.out.println(“子类的有参构造”);<br>    }<br>    public PM() {<br>    //  super(0,”li”,’男’,5000);<br>        System.out.println(“子类的无参构造”);<br>    }<br>    @Override//方法重写<br>    public void show() {<br>        System.out.println(“项目经理的信息:编号：” + getId() + “，姓名:” + getName() + “，性别:” + getGender() + “，薪水:” + getSalary() + “,exp:” + exp + “,bonus:” + bonus);<br>    }<br>}</p>
-<h4 id="代码示例-测试"><a href="#代码示例-测试" class="headerlink" title="代码示例 测试"></a>代码示例 测试</h4><p>package com.javasm.objExtends;</p>
-<p>public class EmployeeTest {<br>    public static void main(String[] args) {<br>        //展示pm se的信息<br>        PM pm = new PM(4,5000);//子类的有参构造进行对象创建<br>        System.out.println(pm);<br>    //    pm.setName(“经理”);<br>    //    pm.setId(1001);<br>    //    pm.setSalary(10000);<br>    //    pm.setGender(‘男’);<br>    //    pm.show();//运行的是子类重写过后的逻辑<br>    //    SE se = new SE();<br>    //    se.setName(“程序员”);<br>    //    se.setId(2001);<br>    //    se.setSalary(8000);<br>    //    se.setGender(‘男’);<br>    //        se.show();<br>    }<br>}</p>
-<h4 id="运行结果"><a href="#运行结果" class="headerlink" title="运行结果"></a>运行结果</h4><p>父类的无参构造<br>子类的有参构造<br>com.javasm.objExtends.PM@16d3586</p>
+        <h1 id="排序"><a href="#排序" class="headerlink" title="排序"></a>排序</h1><h4 id="冒泡排序"><a href="#冒泡排序" class="headerlink" title="冒泡排序"></a>冒泡排序</h4><p>依次比较两个相邻的元素，如果他们的顺序（如从大到小、首字母从A到Z）错误就把他们交换过来。走访元素的工作是重复地进行直到没有相邻元素需要交换，也就是说该元素列已经排序完成。</p>
+<h4 id="代码示例"><a href="#代码示例" class="headerlink" title="代码示例"></a>代码示例</h4><p>package com.javasm.array;</p>
+<p>import java.util.Arrays;</p>
+<p>public class MaoPao {<br>    public static void main(String[] args) {<br>        //定义数组<br>        int[] arr = {10,2,15,7};<br>        //for循环  控制排序的轮数的<br>        for(int i=0;i&lt;arr.length-1;i++) {<br>            //控制元素 相邻的元素相比<br>            for(int j=0;j&lt;arr.length-1-i;j++) {<br>                //判断相邻的两个元素<br>                if(arr[j]&gt;arr[j+1]) {//arr[j]位置交换<br>                    int temp = arr[j];<br>                    arr[j] = arr[j+1];<br>                    arr[j+1] = temp;<br>                }<br>            }<br>        }<br>        System.out.println(arr);//不认识  地址值  引用数据类型<br>        //Arrays<br>        System.out.println(Arrays.toString(arr));//将数组变量转换称字符串常量<br>    }<br>}</p>
+<h4 id="选择排序"><a href="#选择排序" class="headerlink" title="选择排序"></a>选择排序</h4><p>第一次从待排序的数据元素中选出最小（或最大）的一个元素，存放在序列的起始位置，然后再从剩余的未排序元素中寻找到最小（大）元素，然后放到已排序的序列的末尾。以此类推，直到全部待排序的数据元素的个数为零。选择排序是不稳定的排序方法。</p>
+<h4 id="代码示例-1"><a href="#代码示例-1" class="headerlink" title="代码示例"></a>代码示例</h4><p>package com.javasm.array;</p>
+<p>import java.util.Arrays;</p>
+<p>public class XuanZe {<br>    public static void main(String[] args) {<br>        //选择排序<br>        int[] arr = {10,2,15,7};<br>         for(int i=0;i&lt;arr.length-1;i++) {<br>            int min = arr[i];<br>            int minIndex = i;<br>            for(int j=i+1;j&lt;arr.length;j++) {<br>                if(min&gt;arr[j]) {<br>                    min = arr[j];<br>                    minIndex = j;<br>                }<br>            }<br>            //交换位置<br>            int temp = arr[i];<br>            arr[i] = arr[minIndex];<br>            arr[minIndex] = temp;<br>        }<br>        System.out.println(Arrays.toString(arr));<br>    }<br>}</p>
+<h4 id="插入排序"><a href="#插入排序" class="headerlink" title="插入排序"></a>插入排序</h4><p>将一个记录插入到已排好序的序列中，从而得到一个新的有序序列（将序列的第一个数据看成是一个有序的子序列，然后从第二个记录逐个向该有序的子序列进行有序的插入，直至整个序列有序）</p>
+<h4 id="代码示例-2"><a href="#代码示例-2" class="headerlink" title="代码示例"></a>代码示例</h4><p>package com.javasm.array;</p>
+<p>import java.lang.reflect.Array;<br>import java.util.Arrays;</p>
+<p>//  插入排序<br>//  @author DELL</p>
+<p>public class InsertPaiXu {<br>    public static void main(String[] args) {<br>        int[] arr = {10,2,15,7};<br>//        for(int i=1;i&lt;arr.length;i++) {<br>//            int temp = arr[i];<br>//            int leftIndex = i-1;<br>//<br>//            while(leftIndex&gt;=0 &amp;&amp; arr[leftIndex]&gt;temp) {//arr[leftIndex] 右移<br>//                arr[leftIndex+1] = arr[leftIndex];<br>//                leftIndex–;<br>//            }<br>//            //空位<br>//            arr[leftIndex+1] = temp;<br>//        }<br>        System.out.println(Arrays.toString(arr));<br>        Arrays.sort(arr);//默认就是从小到大排序<br>        System.out.println(Arrays.toString(arr));<br>        //Math.random();<br>    }<br>}</p>
 
       
        <hr><span style="font-style: italic;color: gray;"> 个人学习，欢迎指正，qq1272829569 </span>
@@ -322,12 +327,12 @@
 
 
 <div class="article_copyright">
-    <p><span class="copy-title">文章标题:</span>java子类实例化</p>
+    <p><span class="copy-title">文章标题:</span>java排序</p>
     
     <p><span class="copy-title">本文作者:</span><a href="javascript:void(0)" title="子春">子春</a></p>
-    <p><span class="copy-title">发布时间:</span>2019-09-13, 17:25:10</p>
-    <p><span class="copy-title">最后更新:</span>2019-09-13, 20:33:52</p>
-    <span class="copy-title">原始链接:</span><a class="post-url" href="/2019/09/13/javaClass-super/" title="java子类实例化">https://zichun-xg.github.io/2019/09/13/javaClass-super/</a>
+    <p><span class="copy-title">发布时间:</span>2019-09-15, 20:06:21</p>
+    <p><span class="copy-title">最后更新:</span>2019-09-15, 20:38:25</p>
+    <span class="copy-title">原始链接:</span><a class="post-url" href="/2019/09/15/sort/" title="java排序">https://zichun-xg.github.io/2019/09/15/sort/</a>
     <p>
         <span class="copy-title">版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
     </p>
