@@ -2,9 +2,9 @@
 <html>
 <head><meta name="generator" content="Hexo 3.9.0">
   <meta charset="utf-8">
-  <title>java子类实例化 | 子春</title>
-  <meta name="keywords" content=" java ">
-  <meta name="description" content="java子类实例化 | 子春">
+  <title>javaSwitch | 子春</title>
+  <meta name="keywords" content=" study ">
+  <meta name="description" content="javaSwitch | 子春">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta property="og:type" content="website">
 <meta property="og:title" content="categories">
@@ -332,9 +332,9 @@
 </aside>
 <div class="post">
     <div class="pjax">
-        <article id="post-javaClass-super" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-day02-3" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <h1 class="article-title">java子类实例化</h1>
+        <h1 class="article-title">javaSwitch</h1>
     
     <div class="article-meta">
         
@@ -342,21 +342,21 @@
         
         <span class="book">
             
-                <a href="javascript:" data-rel="开发">开发</a>
+                <a href="javascript:" data-rel="学习">学习</a>
             
         </span>
         
         
         <span class="tag">
             
-            <a href="javascript:" class="color5">java</a>
+            <a href="javascript:" class="color1">study</a>
             
         </span>
         
     </div>
     <div class="article-meta">
         
-        创建时间:<time class="date" title='更新时间: 2019-09-13 20:33:52'>2019-09-13 17:25</time>
+        创建时间:<time class="date" title='更新时间: 2019-10-29 23:36:45'>2019-10-29 23:34</time>
         
     </div>
     <div class="article-meta">
@@ -378,7 +378,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#子类实例化流程"><span class="toc-text">子类实例化流程</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-2-super-父类引用-关键字"><span class="toc-text">1.2 super 父类引用(关键字)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#代码示例-父类"><span class="toc-text">代码示例 父类</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#代码示例-子类"><span class="toc-text">代码示例 子类</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#代码示例-测试"><span class="toc-text">代码示例 测试</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#运行结果"><span class="toc-text">运行结果</span></a></li></ol></li></ol></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#switch-case"><span class="toc-text">switch case</span></a></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -393,14 +393,16 @@
 </div>
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="子类实例化流程"><a href="#子类实例化流程" class="headerlink" title="子类实例化流程"></a>子类实例化流程</h1><h4 id="1-2-super-父类引用-关键字"><a href="#1-2-super-父类引用-关键字" class="headerlink" title="1.2 super 父类引用(关键字)"></a>1.2 super 父类引用(关键字)</h4><p>作用：<br>    1.可以访问父类成员(成员变量和成员方法) super.成员<br>    2.可以访问父类的构造方法 super(); super(实参);  必修在子类的构造里访问 而且必修在代码的第一行<br>    子类对象的实例化过程<br>    优先默认执行父类的无参构造 super();(父类构造有异常 子类对象无法创建成功)<br>    假如父类的无参构造不存在(在子类的构造里面必须手动调用父类的有参构造)</p>
-<h4 id="代码示例-父类"><a href="#代码示例-父类" class="headerlink" title="代码示例 父类"></a>代码示例 父类</h4><p>package com.javasm.objExtends;</p>
-<p>public class Employee {<br>    private int id;<br>    private String name;<br>    private char gender;<br>    private double salary;<br>    public void show() {<br>        System.out.println(“员工的信息编号：” + id + “，姓名” + name + “，性别” + gender + “，薪水” + salary);<br>    }<br>    public int getId() {<br>        return id;<br>    }<br>    public void setId(int id) {<br>        this.id = id;<br>    }<br>    public String getName() {<br>        return name;<br>    }<br>    public void setName(String name) {<br>        this.name = name;<br>    }<br>    public char getGender() {<br>        return gender;<br>    }<br>    public void setGender(char gender) {<br>        this.gender = gender;<br>    }<br>    public double getSalary() {<br>        return salary;<br>    }<br>    public void setSalary(double salary) {<br>        this.salary = salary;<br>    }<br>    public Employee() {<br>        System.out.println(“父类的无参构造”);<br>    }<br>    public Employee(int id, String name, char gender, double salary) {<br>        this.id = id;<br>        this.name = name;<br>        this.gender = gender;<br>        this.salary = salary;<br>        System.out.println(“父类的有参构造”);<br>    }<br>}</p>
-<h4 id="代码示例-子类"><a href="#代码示例-子类" class="headerlink" title="代码示例 子类"></a>代码示例 子类</h4><p>package com.javasm.objExtends;</p>
-<p>public class PM extends Employee{<br>    private int exp;<br>    private double bonus;<br>    public int getExp() {<br>        return exp;<br>    }<br>    public void setExp(int exp) {<br>        this.exp = exp;<br>    }<br>    public double getBonus() {<br>        return bonus;<br>    }<br>    public void setBonus(double bonus) {<br>        this.bonus = bonus;<br>    }<br>    public PM(int exp, double bonus) {<br>        super();//运行父类的无参构造 默认执行 必须放在这里的第一行<br>    //  super(0,”li”,’男’,5000);<br>        this.exp = exp;<br>        this.bonus = bonus;<br>        System.out.println(“子类的有参构造”);<br>    }<br>    public PM() {<br>    //  super(0,”li”,’男’,5000);<br>        System.out.println(“子类的无参构造”);<br>    }<br>    @Override//方法重写<br>    public void show() {<br>        System.out.println(“项目经理的信息:编号：” + getId() + “，姓名:” + getName() + “，性别:” + getGender() + “，薪水:” + getSalary() + “,exp:” + exp + “,bonus:” + bonus);<br>    }<br>}</p>
-<h4 id="代码示例-测试"><a href="#代码示例-测试" class="headerlink" title="代码示例 测试"></a>代码示例 测试</h4><p>package com.javasm.objExtends;</p>
-<p>public class EmployeeTest {<br>    public static void main(String[] args) {<br>        //展示pm se的信息<br>        PM pm = new PM(4,5000);//子类的有参构造进行对象创建<br>        System.out.println(pm);<br>    //    pm.setName(“经理”);<br>    //    pm.setId(1001);<br>    //    pm.setSalary(10000);<br>    //    pm.setGender(‘男’);<br>    //    pm.show();//运行的是子类重写过后的逻辑<br>    //    SE se = new SE();<br>    //    se.setName(“程序员”);<br>    //    se.setId(2001);<br>    //    se.setSalary(8000);<br>    //    se.setGender(‘男’);<br>    //        se.show();<br>    }<br>}</p>
-<h4 id="运行结果"><a href="#运行结果" class="headerlink" title="运行结果"></a>运行结果</h4><p>父类的无参构造<br>子类的有参构造<br>com.javasm.objExtends.PM@16d3586</p>
+        <h1 id="switch-case"><a href="#switch-case" class="headerlink" title="switch case"></a>switch case</h1><p>switch case 语句判断一个变量与一系列值中某个值是否相等，每个值称为一个分支。</p>
+<ul>
+<li>switch 语句中的变量类型可以是： byte、shor、int、long、String 、enum或者 char。</li>
+<li>switch case 执行时，一定会先进行匹配，匹配成功返回当前 case 的值，再根据是否有 break，判断是否继续输出，或是跳出判断。</li>
+<li>语法格式如下</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">switch</span>(expression)&#123;</span><br><span class="line">    <span class="keyword">case</span> value :</span><br><span class="line">       <span class="comment">//语句</span></span><br><span class="line">       <span class="keyword">break</span>; <span class="comment">//可选</span></span><br><span class="line">    <span class="keyword">case</span> value :</span><br><span class="line">       <span class="comment">//语句</span></span><br><span class="line">       <span class="keyword">break</span>; <span class="comment">//可选</span></span><br><span class="line">    <span class="comment">//你可以有任意数量的case语句</span></span><br><span class="line">    <span class="keyword">default</span> : <span class="comment">//可选</span></span><br><span class="line">       <span class="comment">//语句</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> study;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.util.Scanner;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Switch</span> </span>&#123;</span><br><span class="line">	</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		Scanner input = <span class="keyword">new</span> Scanner(System.in);</span><br><span class="line">		System.out.println(<span class="string">"请输入您的自动取货码"</span>);</span><br><span class="line">		<span class="keyword">int</span> num = input.nextInt();</span><br><span class="line">		<span class="keyword">switch</span> (num) &#123;</span><br><span class="line">		<span class="keyword">case</span> <span class="number">1</span>:</span><br><span class="line">			System.out.println(<span class="string">"请从一号柜拿走您的快递"</span>);</span><br><span class="line">			<span class="keyword">break</span>;</span><br><span class="line">		<span class="keyword">case</span> <span class="number">2</span>:</span><br><span class="line">			System.out.println(<span class="string">"请从二号柜拿走您的快递"</span>);</span><br><span class="line">			<span class="keyword">break</span>;</span><br><span class="line">		<span class="keyword">case</span> <span class="number">3</span>:</span><br><span class="line">			System.out.println(<span class="string">"请从三号柜拿走您的快递"</span>);</span><br><span class="line">			<span class="keyword">break</span>;</span><br><span class="line">		<span class="keyword">case</span> <span class="number">4</span>:</span><br><span class="line">			System.out.println(<span class="string">"请从四号柜拿走您的快递"</span>);</span><br><span class="line">			<span class="keyword">break</span>;</span><br><span class="line">		<span class="keyword">default</span>:</span><br><span class="line">			System.out.println(<span class="string">"请输入正确的取货码"</span>);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">运算结果：</span><br><span class="line"></span><br><span class="line">请输入您的自动取货码</span><br><span class="line"><span class="number">1</span></span><br><span class="line">请从一号柜拿走您的快递</span><br></pre></td></tr></table></figure>
+
 
       
        <hr><span style="font-style: italic;color: gray;"> 个人学习，欢迎指正，qq1272829569 </span>
@@ -410,12 +412,12 @@
 
 
 <div class="article_copyright">
-    <p><span class="copy-title">文章标题:</span>java子类实例化</p>
+    <p><span class="copy-title">文章标题:</span>javaSwitch</p>
     
     <p><span class="copy-title">本文作者:</span><a href="javascript:void(0)" title="子春">子春</a></p>
-    <p><span class="copy-title">发布时间:</span>2019-09-13, 17:25:10</p>
-    <p><span class="copy-title">最后更新:</span>2019-09-13, 20:33:52</p>
-    <span class="copy-title">原始链接:</span><a class="post-url" href="/2019/09/13/javaClass-super/" title="java子类实例化">https://zichun-xg.github.io/2019/09/13/javaClass-super/</a>
+    <p><span class="copy-title">发布时间:</span>2019-10-29, 23:34:57</p>
+    <p><span class="copy-title">最后更新:</span>2019-10-29, 23:36:45</p>
+    <span class="copy-title">原始链接:</span><a class="post-url" href="/2019/10/29/day02-3/" title="javaSwitch">https://zichun-xg.github.io/2019/10/29/day02-3/</a>
     <p>
         <span class="copy-title">版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
     </p>
