@@ -228,20 +228,20 @@
             <span class="post-date" title="2019-09-13 11:39:52">2019/09/13</span>
         </a>
         
-        <a  class="开发 "
-           href="/2019/09/13/javaClass-super/"
-           data-tag="java"
-           data-author="" >
-            <span class="post-title" title="java子类实例化">java子类实例化</span>
-            <span class="post-date" title="2019-09-13 17:25:10">2019/09/13</span>
-        </a>
-        
         <a  class="其他 "
            href="/2019/09/13/recommend/"
            data-tag=""
            data-author="" >
             <span class="post-title" title="Typing">Typing</span>
             <span class="post-date" title="2019-09-13 11:18:36">2019/09/13</span>
+        </a>
+        
+        <a  class="开发 "
+           href="/2019/09/13/javaClass-super/"
+           data-tag="java"
+           data-author="" >
+            <span class="post-title" title="java子类实例化">java子类实例化</span>
+            <span class="post-date" title="2019-09-13 17:25:10">2019/09/13</span>
         </a>
         
         <a  class="开发 "
@@ -288,7 +288,7 @@
     </div>
     <div class="article-meta">
         
-        创建时间:<time class="date" title='更新时间: 2019-09-12 16:56:12'>2019-09-12 16:28</time>
+        创建时间:<time class="date" title='更新时间: 2019-10-31 23:33:25'>2019-09-12 16:28</time>
         
     </div>
     <div class="article-meta">
@@ -310,7 +310,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#封装"><span class="toc-text">封装</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#代码示例-Animal封装"><span class="toc-text">代码示例 Animal封装</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#代码示例-创建对象"><span class="toc-text">代码示例 创建对象</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#运行结果"><span class="toc-text">运行结果</span></a></li></ol></li></ol></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#封装"><span class="toc-text">封装</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#代码示例-Animal封装"><span class="toc-text">代码示例 Animal封装</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#代码示例-创建对象"><span class="toc-text">代码示例 创建对象</span></a></li></ol></li></ol></li></ol></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -326,12 +326,9 @@
     <div class="article-entry" itemprop="articleBody">
       
         <h1 id="封装"><a href="#封装" class="headerlink" title="封装"></a>封装</h1><p>private:其修饰的成员为私有的只能在本类中相互调用<br>对私有的属性 提供对外的公共的访问方法<br>get()<br>set()<br>称为setter以及getter方法</p>
-<h4 id="代码示例-Animal封装"><a href="#代码示例-Animal封装" class="headerlink" title="代码示例 Animal封装"></a>代码示例 Animal封装</h4><p>package com.javasm.odj;</p>
-<p>public class Animal {<br>    private String name;<br>    private String breed;<br>    private String cloor;<br>    public String getName() {<br>        return name;<br>    }<br>    public void setName(String name) {<br>        this.name = name;<br>    }<br>    public String getBreed() {<br>        return breed;<br>    }<br>    public void setBreed(String breed) {<br>        this.breed = breed;<br>    }<br>    public String getCloor() {<br>        return cloor;<br>    }<br>    public void setCloor(String cloor) {<br>        this.cloor = cloor;<br>    }<br>    public void run() {<br>        System.out.println(name + “在跑”);<br>    }<br>    public void show() {<br>        System.out.println(“这是一只” + cloor + “的” + breed + “,它叫” + name);<br>    }<br>    public Animal() {//无参构造<br>    }<br>    public Animal(String name, String breed, String cloor) {<br>        this.name = name;<br>        this.breed = breed;<br>        this.cloor = cloor;<br>    }<br>}</p>
-<h4 id="代码示例-创建对象"><a href="#代码示例-创建对象" class="headerlink" title="代码示例 创建对象"></a>代码示例 创建对象</h4><p>package com.javasm.odj;</p>
-<p>public class AnimalText {<br>    public static void main(String[] args) {<br>        Animal dog = new Animal();//创建一个dog对象<br>        dog.setName(“辣椒”);<br>        dog.setBreed(“二哈”);<br>        dog.setCloor(“灰色”);<br>        dog.show();<br>        dog.run();<br>        Animal cat = new Animal();//创建一个cat对象<br>        cat.setName(“香蕉”);<br>        cat.setBreed(“加菲猫”);<br>        cat.setCloor(“黄色”);<br>        cat.show();<br>        Animal birds = new Animal(“花花”,”鹦鹉”,”白色”);<br>        birds.show();<br>        System.out.println(birds.getName());<br>    }<br>}</p>
-<h4 id="运行结果"><a href="#运行结果" class="headerlink" title="运行结果"></a>运行结果</h4><p>这是一只灰色的二哈,它叫辣椒<br>辣椒在跑<br>这是一只黄色的加菲猫,它叫香蕉<br>这是一只白色的鹦鹉,它叫花花<br>花花</p>
+<h4 id="代码示例-Animal封装"><a href="#代码示例-Animal封装" class="headerlink" title="代码示例 Animal封装"></a>代码示例 Animal封装</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.javasm.odj;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Animal</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> String name;</span><br><span class="line">    <span class="keyword">private</span> String breed;</span><br><span class="line">    <span class="keyword">private</span> String cloor;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">getName</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> name;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setName</span><span class="params">(String name)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.name = name;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">getBreed</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> breed;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setBreed</span><span class="params">(String breed)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.breed = breed;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">getCloor</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> cloor;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setCloor</span><span class="params">(String cloor)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.cloor = cloor;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">run</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        System.out.println(name + <span class="string">"在跑"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">show</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"这是一只"</span> + cloor + <span class="string">"的"</span> + breed + <span class="string">",它叫"</span> + name);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Animal</span><span class="params">()</span> </span>&#123;<span class="comment">//无参构造</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Animal</span><span class="params">(String name, String breed, String cloor)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.name = name;</span><br><span class="line">        <span class="keyword">this</span>.breed = breed;</span><br><span class="line">        <span class="keyword">this</span>.cloor = cloor;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
+<h4 id="代码示例-创建对象"><a href="#代码示例-创建对象" class="headerlink" title="代码示例 创建对象"></a>代码示例 创建对象</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.javasm.odj;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">AnimalText</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        Animal dog = <span class="keyword">new</span> Animal();<span class="comment">//创建一个dog对象</span></span><br><span class="line">        dog.setName(<span class="string">"辣椒"</span>);</span><br><span class="line">        dog.setBreed(<span class="string">"二哈"</span>);</span><br><span class="line">        dog.setCloor(<span class="string">"灰色"</span>);</span><br><span class="line">        dog.show();</span><br><span class="line">        dog.run();</span><br><span class="line">        Animal cat = <span class="keyword">new</span> Animal();<span class="comment">//创建一个cat对象</span></span><br><span class="line">        cat.setName(<span class="string">"香蕉"</span>);</span><br><span class="line">        cat.setBreed(<span class="string">"加菲猫"</span>);</span><br><span class="line">        cat.setCloor(<span class="string">"黄色"</span>);</span><br><span class="line">        cat.show();</span><br><span class="line">        Animal birds = <span class="keyword">new</span> Animal(<span class="string">"花花"</span>,<span class="string">"鹦鹉"</span>,<span class="string">"白色"</span>);</span><br><span class="line">        birds.show();</span><br><span class="line">        System.out.println(birds.getName());</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">#### 运行结果</span><br><span class="line">这是一只灰色的二哈,它叫辣椒</span><br><span class="line">辣椒在跑</span><br><span class="line">这是一只黄色的加菲猫,它叫香蕉</span><br><span class="line">这是一只白色的鹦鹉,它叫花花</span><br><span class="line">花花</span><br></pre></td></tr></table></figure>
       
        <hr><span style="font-style: italic;color: gray;"> 个人学习，欢迎指正，qq1272829569 </span>
     </div>
@@ -344,7 +341,7 @@
     
     <p><span class="copy-title">本文作者:</span><a href="javascript:void(0)" title="子春">子春</a></p>
     <p><span class="copy-title">发布时间:</span>2019-09-12, 16:28:08</p>
-    <p><span class="copy-title">最后更新:</span>2019-09-12, 16:56:12</p>
+    <p><span class="copy-title">最后更新:</span>2019-10-31, 23:33:25</p>
     <span class="copy-title">原始链接:</span><a class="post-url" href="/2019/09/12/javaClass-Object-encapsulation/" title="Java封装">https://zichun-xg.github.io/2019/09/12/javaClass-Object-encapsulation/</a>
     <p>
         <span class="copy-title">版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
