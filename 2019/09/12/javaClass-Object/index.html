@@ -188,14 +188,6 @@
     
     <nav id="title-list-nav">
         
-        <a  class=""
-           href="/2019/09/11/hello-world/"
-           data-tag=""
-           data-author="" >
-            <span class="post-title" title="Hello World">Hello World</span>
-            <span class="post-date" title="2019-09-11 16:47:13">2019/09/11</span>
-        </a>
-        
         <a  class="笔记 "
            href="/2019/09/27/data-structure/"
            data-tag="note"
@@ -204,12 +196,12 @@
             <span class="post-date" title="2019-09-27 13:50:25">2019/09/27</span>
         </a>
         
-        <a  class="开发 "
-           href="/2019/09/12/javaClass-Object/"
-           data-tag="java"
+        <a  class=""
+           href="/2019/09/11/hello-world/"
+           data-tag=""
            data-author="" >
-            <span class="post-title" title="Java类与对象">Java类与对象</span>
-            <span class="post-date" title="2019-09-12 15:07:43">2019/09/12</span>
+            <span class="post-title" title="Hello World">Hello World</span>
+            <span class="post-date" title="2019-09-11 16:47:13">2019/09/11</span>
         </a>
         
         <a  class="开发 "
@@ -218,6 +210,14 @@
            data-author="" >
             <span class="post-title" title="Java封装">Java封装</span>
             <span class="post-date" title="2019-09-12 16:28:08">2019/09/12</span>
+        </a>
+        
+        <a  class="开发 "
+           href="/2019/09/12/javaClass-Object/"
+           data-tag="java"
+           data-author="" >
+            <span class="post-title" title="Java类与对象">Java类与对象</span>
+            <span class="post-date" title="2019-09-12 15:07:43">2019/09/12</span>
         </a>
         
         <a  class="开发 "
@@ -288,7 +288,7 @@
     </div>
     <div class="article-meta">
         
-        创建时间:<time class="date" title='更新时间: 2019-10-31 23:32:38'>2019-09-12 15:07</time>
+        创建时间:<time class="date" title='更新时间: 2019-11-02 10:40:10'>2019-09-12 15:07</time>
         
     </div>
     <div class="article-meta">
@@ -310,7 +310,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#类与对象"><span class="toc-text">类与对象</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#创建类"><span class="toc-text">创建类</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#代码示例-学生类"><span class="toc-text">代码示例 学生类</span></a></li></ol></li></ol></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#类与对象"><span class="toc-text">类与对象</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#创建类"><span class="toc-text">创建类</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#代码示例-学生类"><span class="toc-text">代码示例 学生类</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#创建对象"><span class="toc-text">创建对象</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#代码示例-李四与张三对象"><span class="toc-text">代码示例 李四与张三对象</span></a></li></ol></li></ol></li></ol></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -327,9 +327,13 @@
       
         <h1 id="类与对象"><a href="#类与对象" class="headerlink" title="类与对象"></a>类与对象</h1><p>java语言的特征：面向对象<br>类：java最小执行单元class 是对象的一个模板<br>对象：基于类创建的一个实体，每个对象仅仅参照一个类</p>
 <h4 id="创建类"><a href="#创建类" class="headerlink" title="创建类"></a>创建类</h4><p>1.属性 存在在类里面<br>2.行为 方法 也是写在类里</p>
-<h4 id="代码示例-学生类"><a href="#代码示例-学生类" class="headerlink" title="代码示例 学生类"></a>代码示例 学生类</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.javasm.odj;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Student</span> </span>&#123;</span><br><span class="line">    <span class="comment">/*</span></span><br><span class="line"><span class="comment">    * 构造方法</span></span><br><span class="line"><span class="comment">    * 作用：在创建对象的同时，给对象赋值</span></span><br><span class="line"><span class="comment">    * 特点：</span></span><br><span class="line"><span class="comment">    *     构造方法名与类名相同</span></span><br><span class="line"><span class="comment">    *     构造方法没有返回值，也没有返回值类型</span></span><br><span class="line"><span class="comment">    *     系统默认有一个无参构造(缺省构造器)</span></span><br><span class="line"><span class="comment">    * 快捷键：Alt+Inside</span></span><br><span class="line"><span class="comment">    * */</span></span><br><span class="line">    String name;<span class="comment">//属性</span></span><br><span class="line">    String number;</span><br><span class="line">    <span class="keyword">char</span> gender;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Student</span><span class="params">()</span> </span>&#123; <span class="comment">//无参构造方法</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Student</span><span class="params">(String name, String number, <span class="keyword">char</span> gender)</span> </span>&#123;<span class="comment">//有参构造方法</span></span><br><span class="line">        <span class="keyword">this</span>.name = name;</span><br><span class="line">        <span class="keyword">this</span>.number = number;</span><br><span class="line">        <span class="keyword">this</span>.gender = gender;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span>  <span class="title">eat</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        System.out.println(name + <span class="string">"在吃饭"</span>);</span><br><span class="line">    &#125;<span class="comment">//类的方法 主要描述一些行为</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">study</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        System.out.println(name + <span class="string">"在学习"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">show</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"name:"</span> + name + <span class="string">",number:"</span> + number + <span class="string">",gender:"</span> + gender);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">#### 创建对象</span><br><span class="line">语法 类名 对象名 = <span class="keyword">new</span> 类名();</span><br><span class="line">#### 代码示例 李四与张三对象</span><br><span class="line"><span class="keyword">package</span> com.javasm.odj;</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">StudentText</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        Student stu = <span class="keyword">new</span> Student();<span class="comment">//选用无参构造创建对象</span></span><br><span class="line">        stu.name = <span class="string">"李四"</span>;</span><br><span class="line">        stu.eat();</span><br><span class="line">        Student stu1 = <span class="keyword">new</span> Student(<span class="string">"张三"</span>,<span class="string">"12345678910"</span>,<span class="string">'男'</span>);</span><br><span class="line">        stu1.eat();</span><br><span class="line">        stu1.show();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">#### 运行结果</span><br><span class="line">李四在吃饭</span><br><span class="line">张三在吃饭</span><br><span class="line">name:张三,number:<span class="number">12345678910</span>,gender:男</span><br></pre></td></tr></table></figure>
+<h4 id="代码示例-学生类"><a href="#代码示例-学生类" class="headerlink" title="代码示例 学生类"></a>代码示例 学生类</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.javasm.odj;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Student</span> </span>&#123;</span><br><span class="line">    <span class="comment">/*</span></span><br><span class="line"><span class="comment">    * 构造方法</span></span><br><span class="line"><span class="comment">    * 作用：在创建对象的同时，给对象赋值</span></span><br><span class="line"><span class="comment">    * 特点：</span></span><br><span class="line"><span class="comment">    *     构造方法名与类名相同</span></span><br><span class="line"><span class="comment">    *     构造方法没有返回值，也没有返回值类型</span></span><br><span class="line"><span class="comment">    *     系统默认有一个无参构造(缺省构造器)</span></span><br><span class="line"><span class="comment">    * 快捷键：Alt+Inside</span></span><br><span class="line"><span class="comment">    * */</span></span><br><span class="line">    String name;<span class="comment">//属性</span></span><br><span class="line">    String number;</span><br><span class="line">    <span class="keyword">char</span> gender;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Student</span><span class="params">()</span> </span>&#123; <span class="comment">//无参构造方法</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Student</span><span class="params">(String name, String number, <span class="keyword">char</span> gender)</span> </span>&#123;<span class="comment">//有参构造方法</span></span><br><span class="line">        <span class="keyword">this</span>.name = name;</span><br><span class="line">        <span class="keyword">this</span>.number = number;</span><br><span class="line">        <span class="keyword">this</span>.gender = gender;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span>  <span class="title">eat</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        System.out.println(name + <span class="string">"在吃饭"</span>);</span><br><span class="line">    &#125;<span class="comment">//类的方法 主要描述一些行为</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">study</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        System.out.println(name + <span class="string">"在学习"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">show</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"name:"</span> + name + <span class="string">",number:"</span> + number + <span class="string">",gender:"</span> + gender);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="创建对象"><a href="#创建对象" class="headerlink" title="创建对象"></a>创建对象</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">语法 类名 对象名 = <span class="keyword">new</span> 类名();</span><br></pre></td></tr></table></figure>
+
+<h4 id="代码示例-李四与张三对象"><a href="#代码示例-李四与张三对象" class="headerlink" title="代码示例 李四与张三对象"></a>代码示例 李四与张三对象</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.javasm.odj;</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">StudentText</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        Student stu = <span class="keyword">new</span> Student();<span class="comment">//选用无参构造创建对象</span></span><br><span class="line">        stu.name = <span class="string">"李四"</span>;</span><br><span class="line">        stu.eat();</span><br><span class="line">        Student stu1 = <span class="keyword">new</span> Student(<span class="string">"张三"</span>,<span class="string">"12345678910"</span>,<span class="string">'男'</span>);</span><br><span class="line">        stu1.eat();</span><br><span class="line">        stu1.show();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">运行结果</span><br><span class="line">李四在吃饭</span><br><span class="line">张三在吃饭</span><br><span class="line">name:张三,number:<span class="number">12345678910</span>,gender:男</span><br></pre></td></tr></table></figure>
       
-       <hr><span style="font-style: italic;color: gray;"> 个人学习，欢迎指正，qq1272829569 </span>
+       <hr><span style="font-style: italic;color: gray;"> 个人站，欢迎交流，qq1272829569 </span>
     </div>
 </article>
 
@@ -340,7 +344,7 @@
     
     <p><span class="copy-title">本文作者:</span><a href="javascript:void(0)" title="子春">子春</a></p>
     <p><span class="copy-title">发布时间:</span>2019-09-12, 15:07:43</p>
-    <p><span class="copy-title">最后更新:</span>2019-10-31, 23:32:38</p>
+    <p><span class="copy-title">最后更新:</span>2019-11-02, 10:40:10</p>
     <span class="copy-title">原始链接:</span><a class="post-url" href="/2019/09/12/javaClass-Object/" title="Java类与对象">https://zichun-xg.github.io/2019/09/12/javaClass-Object/</a>
     <p>
         <span class="copy-title">版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
